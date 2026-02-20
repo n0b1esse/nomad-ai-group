@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --obsidian: #050505;
+  --slate-900: #0f1218;
+  --slate-850: #1a1d24;
+  --slate-950: #080a0e;
+  --silver-300: #c4c8cc;
+  --silver-400: #9ca3af;
+  --silver-500: #6b7280;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--obsidian);
+  color: var(--silver-300);
+}
+
+/* Glass button micro-interaction */
+.glass-btn {
+  position: relative;
+  overflow: hidden;
+}
+.glass-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.02) 50%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.glass-btn:hover::before,
+.glass-btn:focus-visible::before {
+  opacity: 1;
+}
+
+/* Recharts overrides for dark theme */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: rgba(156, 163, 175, 0.15);
+}
+.recharts-text {
+  fill: var(--silver-400);
+  font-size: 12px;
+}
