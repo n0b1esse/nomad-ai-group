@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Nomad AI Group institutional contact page."
+    />
+    <title>Contact | Nomad AI Group</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true">
+      <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+    </div>
+    <header class="site-header">
+      <div class="container">
+        <div class="header-inner">
+          <a class="logo" href="./index.html" aria-label="Nomad AI Group home">Nomad AI Group</a>
+          <nav aria-label="Main navigation">
+            <ul class="nav-list">
+              <li><a class="nav-link" href="./index.html">Home</a></li>
+              <li><a class="nav-link" href="./investment-thesis.html">Investment Thesis</a></li>
+              <li><a class="nav-link" href="./portfolio.html">Portfolio</a></li>
+              <li><a class="nav-link" href="./team.html">Team</a></li>
+              <li><a class="nav-link active" href="./contacts.html" aria-current="page">Contact</a></li>
+            </ul>
+          </nav>
+          <a class="btn btn-secondary" href="./contacts.html">Access Portal</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <p class="eyebrow">Institutional Contact</p>
+          <h1 id="contact-title">Submit a formal request for partnership materials.</h1>
+          <p class="hero-subtitle">
+            Investor Relations reviews all inbound requests under compliance standards.
+            Please provide complete institutional credentials for due processing.
+          </p>
+          <form class="contact-form" action="#" method="post">
+            <div class="form-row">
+              <label for="full-name">Full Name</label>
+              <input id="full-name" name="full-name" type="text" required />
+            </div>
+            <div class="form-row">
+              <label for="institution">Institution</label>
+              <input id="institution" name="institution" type="text" required />
+            </div>
+            <div class="form-row">
+              <label for="email">Work Email</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+            <div class="form-row">
+              <label for="message">Request Details</label>
+              <textarea id="message" name="message" rows="5"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Request Memorandum</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          This material is for informational purposes only and does not constitute an
+          offer to sell or solicitation of an offer to buy any securities.
+        </p>
+        <p>Nomad AI Group | 55 Hudson Yards, New York, NY / Canary Wharf, London</p>
+        <p>
+          Connect: <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

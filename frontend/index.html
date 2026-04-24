@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Venture fund platform for institutional investors focused on disciplined strategies and long-term alpha."
+    />
+    <title>Nomad AI Group | Institutional Venture Capital</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true">
+      <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+    </div>
+    <header class="site-header">
+      <div class="container">
+        <div class="header-inner">
+          <a class="logo" href="./index.html" aria-label="Nomad AI Group home">Nomad AI Group</a>
+          <nav aria-label="Main navigation">
+            <ul class="nav-list">
+              <li><a class="nav-link active" href="./index.html" aria-current="page">Home</a></li>
+              <li><a class="nav-link" href="./investment-thesis.html">Investment Thesis</a></li>
+              <li><a class="nav-link" href="./portfolio.html">Portfolio</a></li>
+              <li><a class="nav-link" href="./team.html">Team</a></li>
+              <li><a class="nav-link" href="./contacts.html">Contact</a></li>
+            </ul>
+          </nav>
+          <a class="btn btn-secondary" href="#contact">Access Portal</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container">
+          <div class="grid-12 hero-layout">
+            <div class="hero-copy">
+              <p class="eyebrow">Institutional Venture Platform</p>
+              <h1 id="hero-title">Architecting the Future of Institutional Capital</h1>
+              <p class="hero-subtitle">
+                We design venture strategies with disciplined underwriting, deep sector
+                conviction, and institutional-grade governance for long-horizon investors.
+              </p>
+              <a class="btn btn-primary" href="#contact">Request Partnership</a>
+            </div>
+            <aside class="hero-graph" aria-label="Fund growth chart">
+              <p class="eyebrow">Fund Growth</p>
+              <svg class="fund-growth-svg" viewBox="0 0 500 220" role="img" aria-label="Fund growth line graph">
+                <line x1="30" y1="20" x2="30" y2="185" stroke="#1E293B" stroke-width="1" />
+                <line x1="30" y1="185" x2="475" y2="185" stroke="#1E293B" stroke-width="1" />
+                <polyline
+                  fill="none"
+                  stroke="#3B82F6"
+                  stroke-width="4"
+                  points="30,175 95,164 155,152 220,136 280,118 345,92 405,58 470,32"
+                />
+                <circle cx="470" cy="32" r="6" fill="#3B82F6" />
+                <text x="36" y="34" fill="#718096" font-size="13">Q1</text>
+                <text x="250" y="204" fill="#718096" font-size="13">FY 2026</text>
+                <text x="414" y="22" fill="#3B82F6" font-size="13">+218%</text>
+              </svg>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="metrics-bar" aria-label="Core metrics">
+        <div class="container">
+          <div class="metrics-grid">
+            <article class="metric-item">
+              <p class="metric-value">$500M+</p>
+              <p class="metric-label">AUM</p>
+            </article>
+            <article class="metric-item">
+              <p class="metric-value">25%+</p>
+              <p class="metric-label">Target IRR</p>
+            </article>
+            <article class="metric-item">
+              <p class="metric-value">40+</p>
+              <p class="metric-label">Investments</p>
+            </article>
+            <article class="metric-item">
+              <p class="metric-value">12</p>
+              <p class="metric-label">Exits</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="aum-section" aria-labelledby="aum-title">
+        <div class="container">
+          <div class="aum-panel">
+            <p class="eyebrow">Assets Under Management</p>
+            <h2 id="aum-title" class="aum-value">$500M+</h2>
+            <p class="aum-caption">Institutional capital under disciplined governance</p>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="venture-matrix-title">
+        <div class="container">
+          <p class="eyebrow">Infographic</p>
+          <h2 id="venture-matrix-title">Venture Matrix - Risk vs Return</h2>
+          <p class="section-subtitle">
+            A simplified visual map of opportunity focus from stable cash-flow to asymmetric growth.
+          </p>
+          <div class="venture-matrix-wrap">
+            <article class="venture-matrix" aria-label="Venture matrix grid">
+              <svg viewBox="0 0 860 420" role="img" aria-label="2 by 2 venture matrix of risk and return">
+                <line x1="120" y1="40" x2="120" y2="360" stroke="#1E293B" stroke-width="1.2"></line>
+                <line x1="120" y1="360" x2="790" y2="360" stroke="#1E293B" stroke-width="1.2"></line>
+                <line x1="455" y1="40" x2="455" y2="360" stroke="#1E293B" stroke-width="1"></line>
+                <line x1="120" y1="200" x2="790" y2="200" stroke="#1E293B" stroke-width="1"></line>
+
+                <text class="matrix-axis" x="24" y="210" transform="rotate(-90 24,210)">Return</text>
+                <text class="matrix-axis" x="430" y="402">Risk</text>
+
+                <text class="matrix-label" x="225" y="125">Core Infrastructure</text>
+                <text class="matrix-label" x="560" y="125">Frontier Platforms</text>
+                <text class="matrix-label" x="230" y="285">Defensive SaaS</text>
+                <text class="matrix-label" x="560" y="285">Deep Tech Conviction</text>
+              </svg>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="philosophy" id="track-record" aria-labelledby="philosophy-title">
+        <div class="container">
+          <h2 id="philosophy-title">Philosophy</h2>
+          <div class="philosophy-grid">
+            <article class="philosophy-card">
+              <h3>Rigorous Selection</h3>
+              <p>
+                Multi-layer diligence across team quality, market structure, and
+                durability of competitive moats.
+              </p>
+            </article>
+            <article class="philosophy-card">
+              <h3>Strategic Alpha</h3>
+              <p>
+                Concentrated exposure to innovation verticals where proprietary
+                sourcing and active support unlock asymmetric outcomes.
+              </p>
+            </article>
+            <article class="philosophy-card">
+              <h3>Risk Mitigation</h3>
+              <p>
+                Portfolio construction calibrated for downside protection through
+                stage diversification and governance discipline.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="risk-management" aria-labelledby="risk-management-title">
+        <div class="container">
+          <h2 id="risk-management-title">Risk Management</h2>
+          <div class="risk-management-grid">
+            <ul class="risk-list" aria-label="Risk management pillars">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M12 2 4 5v6c0 5.2 3.4 10.1 8 11 4.6-.9 8-5.8 8-11V5l-8-3Zm-1.1 13.6-3-3 1.4-1.4 1.6 1.6 3.8-3.8 1.4 1.4-5.2 5.2Z"
+                  />
+                </svg>
+                <span>Compliance</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M4 4h11v2H6v12h12v-9h2v11H4V4Zm11 0 5 5h-5V4Zm-7 6h8v2H8v-2Zm0 4h8v2H8v-2Z"
+                  />
+                </svg>
+                <span>Due Diligence</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M12 2 2 7l10 5 8-4v6h2V7L12 2Zm-6 9.2V16l6 3 6-3v-4.8l-6 3-6-3Z"
+                  />
+                </svg>
+                <span>Governance</span>
+              </li>
+            </ul>
+            <p class="risk-copy">
+              Our fiduciary framework prioritizes capital preservation, transparent oversight,
+              and aligned incentives, ensuring every allocation decision reflects the long-term
+              interests of our institutional partners.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="analytics" aria-labelledby="analytics-title">
+        <div class="container">
+          <div class="grid-12 analytics-layout">
+            <div class="analytics-copy">
+              <p class="eyebrow">Sector Distribution</p>
+              <h2 id="analytics-title">Asset Allocation Snapshot</h2>
+              <p class="section-subtitle">
+                A high-level allocation placeholder for institutional review: 40% AI, 30% Biotech,
+                30% FinTech.
+              </p>
+            </div>
+            <article class="donut-card" aria-label="Sector allocation donut chart">
+              <div class="donut-wrap">
+                <svg class="donut-svg" viewBox="0 0 240 240" role="img" aria-label="40 percent AI, 30 percent Biotech, 30 percent FinTech">
+                  <circle class="donut-bg" cx="120" cy="120" r="100"></circle>
+                  <circle class="donut-segment ai" cx="120" cy="120" r="100"></circle>
+                  <circle class="donut-segment bio" cx="120" cy="120" r="100"></circle>
+                  <circle class="donut-segment fintech" cx="120" cy="120" r="100"></circle>
+                </svg>
+                <ul class="donut-legend" aria-label="Sector allocation legend">
+                  <li><span class="legend-dot ai"></span>AI - 40%</li>
+                  <li><span class="legend-dot bio"></span>Biotech - 30%</li>
+                  <li><span class="legend-dot fintech"></span>FinTech - 30%</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="portfolio" id="portfolio" aria-labelledby="portfolio-title">
+        <div class="container">
+          <h2 id="portfolio-title">Portfolio</h2>
+          <p class="section-subtitle">
+            Representative companies from high-conviction funds.
+          </p>
+          <div class="portfolio-grid">
+            <figure class="portfolio-logo">
+              <img
+                src="https://placehold.co/280x140/f3f5f8/1f2937?text=Astera+Labs"
+                alt="Astera Labs placeholder logo"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="portfolio-logo">
+              <img
+                src="https://placehold.co/280x140/f3f5f8/1f2937?text=Novum+Energy"
+                alt="Novum Energy placeholder logo"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="portfolio-logo">
+              <img
+                src="https://placehold.co/280x140/f3f5f8/1f2937?text=Quantum+Grid"
+                alt="Quantum Grid placeholder logo"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="portfolio-logo">
+              <img
+                src="https://placehold.co/280x140/f3f5f8/1f2937?text=Helix+Bio"
+                alt="Helix Bio placeholder logo"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="portfolio-logo">
+              <img
+                src="https://placehold.co/280x140/f3f5f8/1f2937?text=Atlas+Compute"
+                alt="Atlas Compute placeholder logo"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="portfolio-logo">
+              <img
+                src="https://placehold.co/280x140/f3f5f8/1f2937?text=Orion+Fintech"
+                alt="Orion Fintech placeholder logo"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <h2 id="contact-title">Contact</h2>
+          <p class="section-subtitle">
+            Request our investment memorandum for qualified institutional review.
+          </p>
+          <form class="contact-form" action="#" method="post">
+            <div class="form-row">
+              <label for="full-name">Full Name</label>
+              <input id="full-name" name="full-name" type="text" required />
+            </div>
+            <div class="form-row">
+              <label for="institution">Institution</label>
+              <input id="institution" name="institution" type="text" required />
+            </div>
+            <div class="form-row">
+              <label for="email">Work Email</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+            <div class="form-row">
+              <label for="message">Request Details</label>
+              <textarea id="message" name="message" rows="5"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Request Memorandum</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          This material is for informational purposes only and does not constitute an
+          offer to sell or solicitation of an offer to buy any securities.
+        </p>
+        <p>Nomad AI Group | 55 Hudson Yards, New York, NY / Canary Wharf, London</p>
+        <p>
+          Connect: <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

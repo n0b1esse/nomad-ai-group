@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Nomad AI Group portfolio with transparent sector-based view."
+    />
+    <title>Portfolio | Nomad AI Group</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true">
+      <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+    </div>
+    <header class="site-header">
+      <div class="container">
+        <div class="header-inner">
+          <a class="logo" href="./index.html" aria-label="Nomad AI Group home">Nomad AI Group</a>
+          <nav aria-label="Main navigation">
+            <ul class="nav-list">
+              <li><a class="nav-link" href="./index.html">Home</a></li>
+              <li><a class="nav-link" href="./investment-thesis.html">Investment Thesis</a></li>
+              <li><a class="nav-link active" href="./portfolio.html" aria-current="page">Portfolio</a></li>
+              <li><a class="nav-link" href="./team.html">Team</a></li>
+              <li><a class="nav-link" href="./contacts.html">Contact</a></li>
+            </ul>
+          </nav>
+          <a class="btn btn-secondary" href="./contacts.html">Access Portal</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="portfolio-title">
+        <div class="container">
+          <p class="eyebrow">Portfolio Transparency</p>
+          <h1 id="portfolio-title">Sector allocation visibility with institutional clarity.</h1>
+          <p class="hero-subtitle">
+            Our portfolio disclosure is structured by sector to support efficient analysis,
+            consistent reporting, and disciplined communication with limited partners.
+          </p>
+        </div>
+      </section>
+
+      <section class="analytics" aria-labelledby="portfolio-analytics-title">
+        <div class="container">
+          <div class="grid-12 analytics-layout">
+            <div class="analytics-copy">
+              <p class="eyebrow">Allocation View</p>
+              <h2 id="portfolio-analytics-title">Sector Distribution</h2>
+              <p class="section-subtitle">
+                Current placeholder allocation profile for investment committee reporting.
+              </p>
+            </div>
+            <article class="donut-card" aria-label="Sector allocation donut chart">
+              <div class="donut-wrap">
+                <svg class="donut-svg" viewBox="0 0 240 240" role="img" aria-label="40 percent AI, 30 percent Biotech, 30 percent FinTech">
+                  <circle class="donut-bg" cx="120" cy="120" r="100"></circle>
+                  <circle class="donut-segment ai" cx="120" cy="120" r="100"></circle>
+                  <circle class="donut-segment bio" cx="120" cy="120" r="100"></circle>
+                  <circle class="donut-segment fintech" cx="120" cy="120" r="100"></circle>
+                </svg>
+                <ul class="donut-legend" aria-label="Sector allocation legend">
+                  <li><span class="legend-dot ai"></span>AI - 40%</li>
+                  <li><span class="legend-dot bio"></span>Biotech - 30%</li>
+                  <li><span class="legend-dot fintech"></span>FinTech - 30%</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section aria-label="Portfolio companies">
+        <div class="container">
+          <h2>Portfolio by Sector</h2>
+          <div class="filter-controls" role="group" aria-label="Filter portfolio by sector">
+            <button class="filter-btn is-active" type="button" data-filter="all">All Sectors</button>
+            <button class="filter-btn" type="button" data-filter="DeepTech">DeepTech</button>
+            <button class="filter-btn" type="button" data-filter="FinTech">FinTech</button>
+            <button class="filter-btn" type="button" data-filter="SaaS">SaaS</button>
+          </div>
+
+          <div class="portfolio-company-grid">
+            <article class="company-card" data-sector="DeepTech">
+              <img src="https://placehold.co/320x140/eaeaea/2a2a2a?text=Vector+Photonics" alt="Vector Photonics logo" loading="lazy" />
+              <div class="company-meta"><span>2022</span><span>Series B</span></div>
+              <h3>Vector Photonics</h3>
+              <p>
+                Vector Photonics develops high-efficiency optical components for data-center and
+                industrial systems. The company demonstrates strong IP defensibility and repeat
+                enterprise demand from long-cycle buyers.
+              </p>
+            </article>
+
+            <article class="company-card" data-sector="FinTech">
+              <img src="https://placehold.co/320x140/eaeaea/2a2a2a?text=LedgerBridge" alt="LedgerBridge logo" loading="lazy" />
+              <div class="company-meta"><span>2021</span><span>Series A</span></div>
+              <h3>LedgerBridge</h3>
+              <p>
+                LedgerBridge provides regulated cross-border treasury infrastructure for institutions
+                operating in multi-jurisdiction environments. Its compliance-first architecture has
+                enabled consistent expansion with low operational incident rates.
+              </p>
+            </article>
+
+            <article class="company-card" data-sector="SaaS">
+              <img src="https://placehold.co/320x140/eaeaea/2a2a2a?text=OpsAxis" alt="OpsAxis logo" loading="lazy" />
+              <div class="company-meta"><span>2023</span><span>Series A</span></div>
+              <h3>OpsAxis</h3>
+              <p>
+                OpsAxis delivers workflow orchestration software for regulated enterprise operations.
+                The product exhibits high gross retention and supports measurable productivity gains
+                within mission-critical teams.
+              </p>
+            </article>
+
+            <article class="company-card" data-sector="DeepTech">
+              <img src="https://placehold.co/320x140/eaeaea/2a2a2a?text=Axiom+Robotics" alt="Axiom Robotics logo" loading="lazy" />
+              <div class="company-meta"><span>2020</span><span>Series B</span></div>
+              <h3>Axiom Robotics</h3>
+              <p>
+                Axiom Robotics builds autonomous inspection platforms for energy and infrastructure
+                assets. Revenue quality is supported by multi-year contracts and low churn in
+                industrial accounts.
+              </p>
+            </article>
+
+            <article class="company-card" data-sector="FinTech">
+              <img src="https://placehold.co/320x140/eaeaea/2a2a2a?text=North+Quorum" alt="North Quorum logo" loading="lazy" />
+              <div class="company-meta"><span>2024</span><span>Series A</span></div>
+              <h3>North Quorum</h3>
+              <p>
+                North Quorum offers institutional risk analytics for private market allocations.
+                The platform enables audit-ready reporting and improves manager oversight across
+                distributed portfolios.
+              </p>
+            </article>
+
+            <article class="company-card" data-sector="SaaS">
+              <img src="https://placehold.co/320x140/eaeaea/2a2a2a?text=Cascade+Cloud" alt="Cascade Cloud logo" loading="lazy" />
+              <div class="company-meta"><span>2022</span><span>Series B</span></div>
+              <h3>Cascade Cloud</h3>
+              <p>
+                Cascade Cloud provides secure data-governance tooling for global enterprise teams.
+                The business has demonstrated disciplined unit economics and predictable renewal
+                performance across major customer cohorts.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          This material is for informational purposes only and does not constitute an
+          offer to sell or solicitation of an offer to buy any securities.
+        </p>
+        <p>Nomad AI Group | 55 Hudson Yards, New York, NY / Canary Wharf, London</p>
+        <p>
+          Connect: <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
