@@ -17,6 +17,45 @@ const caseModalDone = document.querySelector("#case-modal-done");
 const caseModalResult = document.querySelector("#case-modal-result");
 const caseModalCta = document.querySelector("#case-modal-cta");
 const caseModalImage = document.querySelector("#case-modal-image");
+const mobileMenuToggle = document.querySelector("[data-mobile-menu-toggle]");
+const mobileMenu = document.querySelector("[data-mobile-menu]");
+
+if (mobileMenuToggle && mobileMenu) {
+  const closeMobileMenu = () => {
+    mobileMenu.hidden = true;
+    mobileMenuToggle.setAttribute("aria-expanded", "false");
+  };
+
+  mobileMenuToggle.addEventListener("click", () => {
+    const shouldOpen = mobileMenu.hidden;
+    mobileMenu.hidden = !shouldOpen;
+    mobileMenuToggle.setAttribute("aria-expanded", shouldOpen ? "true" : "false");
+  });
+
+  mobileMenu.querySelectorAll("a").forEach((menuLink) => {
+    menuLink.addEventListener("click", closeMobileMenu);
+  });
+
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    if (mobileMenu.hidden) return;
+    if (mobileMenu.contains(target) || mobileMenuToggle.contains(target)) return;
+    closeMobileMenu();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMobileMenu();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 680) {
+      closeMobileMenu();
+    }
+  });
+}
 
 const onScroll = () => {
   if (header) {

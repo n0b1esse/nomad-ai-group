@@ -37,6 +37,27 @@
             </ul>
           </nav>
           <a class="btn btn-secondary" href="./contacts.html">Связаться с нами</a>
+          <button
+            class="mobile-menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            data-mobile-menu-toggle
+          >
+            Меню
+          </button>
+          <div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
+            <nav aria-label="Мобильная навигация">
+              <ul class="nav-list">
+                <li><a class="nav-link" href="./index.html">Главная</a></li>
+                <li><a class="nav-link" href="./services.html">Услуги</a></li>
+                <li><a class="nav-link" href="./cases.html">Кейсы</a></li>
+                <li><a class="nav-link" href="./contacts.html">Контакты</a></li>
+                <li><a class="nav-link active" href="./portfolio.html" aria-current="page">О нас</a></li>
+              </ul>
+            </nav>
+            <a class="btn btn-secondary mobile-menu-action" href="./contacts.html">Связаться с нами</a>
+          </div>
         </div>
       </div>
     </header>
