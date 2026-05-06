@@ -1154,7 +1154,9 @@ textarea:focus {
 
 @media (max-width: 680px) {
   .site-header .container {
-    width: 100%;
+    width: 100% !important;
+    max-width: none;
+    margin: 0;
   }
 
   html,
@@ -1178,11 +1180,20 @@ textarea:focus {
   }
 
   .header-inner {
+    width: 100%;
     min-height: 72px;
     padding: 0;
     gap: 1rem;
     flex-wrap: nowrap;
     justify-content: space-between;
+  }
+
+  .header-inner .logo {
+    margin-right: auto;
+  }
+
+  .mobile-menu-toggle {
+    margin-left: auto;
   }
 
   .header-inner > nav,
