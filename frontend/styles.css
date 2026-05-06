@@ -1153,6 +1153,10 @@ textarea:focus {
 }
 
 @media (max-width: 680px) {
+  .site-header .container {
+    width: 100%;
+  }
+
   html,
   body {
     overflow-x: hidden;
@@ -1175,7 +1179,10 @@ textarea:focus {
 
   .header-inner {
     min-height: 72px;
+    padding: 0;
     gap: 1rem;
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
 
   .header-inner > nav,
