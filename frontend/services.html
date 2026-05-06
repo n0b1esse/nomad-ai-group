@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="О компании Nomad AI Group: подход, ценности и экспертиза."
+      content="Услуги Nomad AI Group: стратегия, аналитика, риск-контроль и сопровождение роста."
     />
-    <title>О нас | Nomad AI Group</title>
+    <title>Услуги | Nomad AI Group</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,10 +30,10 @@
           <nav aria-label="Основная навигация">
             <ul class="nav-list">
               <li><a class="nav-link" href="./index.html">Главная</a></li>
-              <li><a class="nav-link" href="./services.html">Услуги</a></li>
+              <li><a class="nav-link active" href="./services.html" aria-current="page">Услуги</a></li>
               <li><a class="nav-link" href="./cases.html">Кейсы</a></li>
               <li><a class="nav-link" href="./contacts.html">Контакты</a></li>
-              <li><a class="nav-link active" href="./portfolio.html" aria-current="page">О нас</a></li>
+              <li><a class="nav-link" href="./portfolio.html">О нас</a></li>
             </ul>
           </nav>
           <a class="btn btn-secondary" href="./contacts.html">Связаться с нами</a>
@@ -42,42 +42,64 @@
     </header>
 
     <main>
-      <section class="page-hero" aria-labelledby="portfolio-title">
+      <section class="page-hero" aria-labelledby="services-title">
         <div class="container">
-          <p class="eyebrow">О компании</p>
-          <h1 id="portfolio-title">Nomad AI Group</h1>
+          <p class="eyebrow">Услуги</p>
+          <h1 id="services-title">Комплексные решения для устойчивого роста и управления рисками.</h1>
           <p class="hero-subtitle">
-            г. Бишкек, Первомайский район, ул. Исанова, д. 79, каб. 107.
-            Телефон: <a href="tel:+996550105060">+996550105060</a>.
+            Мы помогаем компаниям и инвестиционным партнерам выстраивать операционную устойчивость,
+            ускорять рост и принимать решения на основе данных.
           </p>
         </div>
       </section>
 
-      <section class="analytics" aria-labelledby="portfolio-analytics-title">
+      <section aria-labelledby="services-grid-title">
         <div class="container">
-          <div class="grid-12 analytics-layout">
-            <div class="analytics-copy">
-              <p class="eyebrow">Наш подход</p>
-              <h2 id="portfolio-analytics-title">Как мы работаем</h2>
-              <p class="section-subtitle">
-                Мы принимаем решения на основе данных, комплексной проверки и активной поддержки
-                портфельных компаний на всех этапах роста.
+          <h2 id="services-grid-title">Направления услуг</h2>
+          <p class="section-subtitle">
+            Практический фокус на measurable-результатах: от стратегии до внедрения процессов и контроля.
+          </p>
+          <div class="philosophy-grid">
+            <article class="philosophy-card">
+              <h3>Стратегический консалтинг</h3>
+              <p>
+                Проводим аудит текущей модели, формируем roadmap роста и помогаем приоритизировать инициативы
+                с учетом рисков и доступных ресурсов.
               </p>
-            </div>
-            <article class="donut-card" aria-label="Ключевые принципы работы">
-              <div class="donut-wrap">
-                <svg class="donut-svg" viewBox="0 0 240 240" role="img" aria-label="Ключевые принципы Nomad AI Group">
-                  <circle class="donut-bg" cx="120" cy="120" r="100"></circle>
-                  <circle class="donut-segment ai" cx="120" cy="120" r="100"></circle>
-                  <circle class="donut-segment bio" cx="120" cy="120" r="100"></circle>
-                  <circle class="donut-segment fintech" cx="120" cy="120" r="100"></circle>
-                </svg>
-                <ul class="donut-legend" aria-label="Легенда ключевых принципов">
-                  <li><span class="legend-dot ai"></span>Аналитика и данные</li>
-                  <li><span class="legend-dot bio"></span>Управление рисками</li>
-                  <li><span class="legend-dot fintech"></span>Активное партнерство</li>
-                </ul>
-              </div>
+            </article>
+            <article class="philosophy-card">
+              <h3>Финансовая аналитика</h3>
+              <p>
+                Настраиваем управленческую отчетность, KPI и сценарное моделирование для более точного
+                прогнозирования выручки, маржи и капитальных потребностей.
+              </p>
+            </article>
+            <article class="philosophy-card">
+              <h3>Риск и комплаенс</h3>
+              <p>
+                Выстраиваем контрольные процедуры, политику управления рисками и прозрачную систему мониторинга
+                для соответствия внутренним и регуляторным требованиям.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="services-process-title">
+        <div class="container">
+          <h2 id="services-process-title">Как мы работаем</h2>
+          <div class="timeline" aria-label="Этапы работы по услугам">
+            <article class="timeline-step">
+              <h3>Диагностика</h3>
+              <p>Анализируем исходные данные, цели бизнеса и ограничения, фиксируем ключевые точки роста.</p>
+            </article>
+            <article class="timeline-step">
+              <h3>Проектирование</h3>
+              <p>Формируем план внедрения, KPI и архитектуру управления изменениями под вашу операционную среду.</p>
+            </article>
+            <article class="timeline-step">
+              <h3>Внедрение и сопровождение</h3>
+              <p>Запускаем решения, обучаем команду и контролируем метрики результата на регулярной основе.</p>
             </article>
           </div>
         </div>
@@ -85,9 +107,9 @@
 
       <section class="contact" id="contact" aria-labelledby="contact-title">
         <div class="container">
-          <h2 id="contact-title">Форма заявки</h2>
+          <h2 id="contact-title">Запросить консультацию</h2>
           <p class="section-subtitle">
-            Оставьте заявку, и мы свяжемся с вами для обсуждения возможного партнерства.
+            Расскажите о вашей задаче, и мы предложим подходящий формат сотрудничества.
           </p>
           <form class="contact-form" action="#" method="post">
             <div class="form-row">
@@ -103,10 +125,10 @@
               <input id="email" name="email" type="email" required />
             </div>
             <div class="form-row">
-              <label for="message">Комментарий</label>
+              <label for="message">Задача</label>
               <textarea id="message" name="message" rows="5"></textarea>
             </div>
-            <button class="btn btn-primary" type="submit">Отправить заявку</button>
+            <button class="btn btn-primary" type="submit">Отправить запрос</button>
           </form>
         </div>
       </section>

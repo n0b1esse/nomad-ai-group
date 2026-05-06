@@ -9,6 +9,14 @@ const filterButtons = document.querySelectorAll("[data-filter]");
 const portfolioCards = document.querySelectorAll("[data-sector]");
 const bioModal = document.querySelector("#bio-modal");
 const bioModalBody = document.querySelector("#bio-modal-body");
+const caseModal = document.querySelector("#case-modal");
+const caseModalMeta = document.querySelector("#case-modal-meta");
+const caseModalTitle = document.querySelector("#case-modal-title");
+const caseModalBefore = document.querySelector("#case-modal-before");
+const caseModalDone = document.querySelector("#case-modal-done");
+const caseModalResult = document.querySelector("#case-modal-result");
+const caseModalCta = document.querySelector("#case-modal-cta");
+const caseModalImage = document.querySelector("#case-modal-image");
 
 const onScroll = () => {
   if (header) {
@@ -56,7 +64,7 @@ if (contactForm) {
     const isBlockedDomain = disallowedEmailDomains.includes(emailDomain);
 
     if (isBlockedDomain) {
-      emailInput.setCustomValidity("Please use your corporate email address.");
+      emailInput.setCustomValidity("Пожалуйста, используйте корпоративный email.");
       emailInput.reportValidity();
       return;
     }
@@ -67,7 +75,7 @@ if (contactForm) {
     const dateCode = new Date().toISOString().slice(0, 10).replaceAll("-", "");
     const randomCode = Math.floor(1000 + Math.random() * 9000);
     const referenceId = `INQ-${dateCode}-${randomCode}`;
-    const submissionDate = new Date().toLocaleDateString("en-US", {
+    const submissionDate = new Date().toLocaleDateString("ru-RU", {
       year: "numeric",
       month: "long",
       day: "numeric",
@@ -77,17 +85,17 @@ if (contactForm) {
     confirmationWrap.setAttribute("role", "status");
     confirmationWrap.setAttribute("aria-live", "polite");
     confirmationWrap.innerHTML = `
-      <span class="confirmation-watermark" aria-hidden="true">Verified</span>
-      <p class="confirmation-title">Submission Confirmed</p>
+      <span class="confirmation-watermark" aria-hidden="true">Проверено</span>
+      <p class="confirmation-title">Заявка подтверждена</p>
       <p class="confirmation-text">
-        Your request is being processed by our Investor Relations department. Expected response time: 24 hours.
+        Ваш запрос обрабатывается отделом по работе с инвесторами. Ожидаемое время ответа: 24 часа.
       </p>
       <div class="confirmation-meta" aria-hidden="true">
-        <span class="confirmation-stamp">IR Registered</span>
+        <span class="confirmation-stamp">Зарегистрировано IR</span>
         <span>${submissionDate}</span>
       </div>
-      <p class="confirmation-reference">Reference ID: ${referenceId}</p>
-      <p class="confirmation-signature">Investor Relations Desk</p>
+      <p class="confirmation-reference">Идентификатор заявки: ${referenceId}</p>
+      <p class="confirmation-signature">Отдел по работе с инвесторами</p>
     `;
 
     contactForm.replaceWith(confirmationWrap);
@@ -144,6 +152,57 @@ if (bioModal && bioModalBody) {
     if (!(target instanceof Element)) return;
     if (target.hasAttribute("data-close-modal") || target === bioModal) {
       bioModal.close();
+    }
+  });
+}
+
+if (
+  caseModal &&
+  caseModalTitle &&
+  caseModalBefore &&
+  caseModalDone &&
+  caseModalResult &&
+  caseModalCta &&
+  caseModalMeta &&
+  caseModalImage
+) {
+  const caseOpenButtons = document.querySelectorAll("[data-case-title]");
+
+  caseOpenButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const title = button.dataset.caseTitle || "Кейс";
+      const meta = button.dataset.caseMeta || "";
+      const before = button.dataset.caseBefore || "";
+      const done = button.dataset.caseDone || "";
+      const result = button.dataset.caseResult || "";
+      const cta = button.dataset.caseCta || "Связаться с нами";
+      const image = button.dataset.caseImage || "";
+
+      caseModalTitle.textContent = title;
+      caseModalMeta.textContent = meta;
+      caseModalBefore.textContent = before;
+      caseModalDone.textContent = done;
+      caseModalResult.textContent = result;
+      caseModalCta.textContent = cta;
+
+      if (image) {
+        caseModalImage.src = image;
+        caseModalImage.alt = `Иллюстрация: ${title}`;
+        caseModalImage.hidden = false;
+      } else {
+        caseModalImage.hidden = true;
+        caseModalImage.removeAttribute("src");
+      }
+
+      caseModal.showModal();
+    });
+  });
+
+  caseModal.addEventListener("click", (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    if (target.hasAttribute("data-close-case-modal") || target === caseModal) {
+      caseModal.close();
     }
   });
 }
