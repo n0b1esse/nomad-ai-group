@@ -277,17 +277,13 @@ p {
 
 .hero-graph,
 .philosophy-card,
-.portfolio-logo,
 .company-card,
-.team-card,
 .timeline-step,
 .donut-card,
 .risk-list li,
 .submission-confirmation,
 input,
 textarea,
-.filter-btn,
-.bio-modal-content,
 .venture-matrix,
 .aum-panel {
   border: 0.5px solid var(--border-muted);
@@ -376,6 +372,12 @@ textarea,
   animation: slow-fade-in 2.2s ease both;
 }
 
+.aum-panel .eyebrow,
+.aum-caption {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .aum-value {
   margin: 0;
   font-family: "Playfair Display", Georgia, serif;
@@ -386,10 +388,11 @@ textarea,
 
 .aum-caption {
   margin-top: 0.75rem;
+  max-width: 44ch;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   font-size: 0.82rem;
-  color: var(--accent-slate);
+  color: #94a3b8;
 }
 
 .venture-matrix-wrap {
@@ -418,17 +421,14 @@ textarea,
 }
 
 .philosophy-grid,
-.portfolio-grid,
-.portfolio-company-grid,
-.team-grid {
+.portfolio-company-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(1rem, 1.8vw, 1.6rem);
 }
 
 .philosophy-card,
-.company-card,
-.team-card {
+.company-card {
   padding: 1.4rem;
 }
 
@@ -438,18 +438,8 @@ textarea,
   transition: transform 260ms ease, border-color 260ms ease, box-shadow 260ms ease;
 }
 
-.portfolio-logo {
-  margin: 0;
-  min-height: 120px;
-  padding: 1.1rem;
-  display: flex;
-  align-items: center;
-}
-
 .philosophy-card:hover,
-.portfolio-logo:hover,
-.company-card:hover,
-.team-card:hover {
+.company-card:hover {
   transform: translateY(-3px);
 }
 
@@ -580,6 +570,10 @@ textarea,
   max-width: 860px;
 }
 
+.contact-form.is-submitting {
+  opacity: 0.92;
+}
+
 .form-row {
   position: relative;
   margin-bottom: 1.2rem;
@@ -607,6 +601,19 @@ textarea:focus {
   outline: none;
   border-color: var(--accent-cool-blue);
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.14);
+}
+
+.contact-form-status {
+  margin: 0 0 1rem;
+  padding: 0.9rem 1rem;
+  border: 0.5px solid rgba(239, 68, 68, 0.45);
+  background: rgba(127, 29, 29, 0.25);
+  color: #fecaca;
+}
+
+.btn[disabled] {
+  cursor: wait;
+  opacity: 0.7;
 }
 
 .submission-confirmation {
@@ -823,35 +830,9 @@ textarea:focus {
   margin-top: 0.7rem;
 }
 
-.emphasis-strip {
-  margin-top: 1.8rem;
-  border-left: 2px solid var(--accent-steel);
-  padding-left: 1rem;
-}
-
-.filter-controls {
-  margin: 1.8rem 0 1.4rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-
-.filter-btn {
-  min-height: 38px;
-  padding: 0.48rem 0.95rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.74rem;
-  color: var(--text-body);
-  cursor: pointer;
-  transition: all 260ms ease;
-}
-
-.filter-btn.is-active,
-.filter-btn:hover,
-.filter-btn:focus-visible {
-  border-color: var(--accent-cool-blue);
-  color: var(--accent-cool-blue);
+.company-card picture {
+  display: block;
+  width: 100%;
 }
 
 .company-card img {
@@ -903,78 +884,13 @@ textarea:focus {
   box-shadow: inset 0 0 16px rgba(59, 130, 246, 0.12), 0 12px 28px rgba(0, 0, 0, 0.55);
 }
 
-.company-meta,
-.team-title {
+.company-meta {
+  display: flex;
+  justify-content: space-between;
   color: var(--accent-slate);
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-}
-
-.company-meta {
-  display: flex;
-  justify-content: space-between;
-}
-
-.team-card img {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-}
-
-.team-links {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.bio-link {
-  border: none;
-  padding: 0;
-  background: transparent;
-  color: var(--accent-cool-blue);
-  cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  transition: color 300ms ease;
-}
-
-.linkedin-link {
-  width: 30px;
-  height: 30px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 0.5px solid var(--border-muted);
-  transition: border-color 300ms ease;
-}
-
-.linkedin-link:hover {
-  border-color: var(--accent-cool-blue);
-}
-
-.linkedin-link svg {
-  width: 14px;
-  height: 14px;
-  fill: var(--accent-cool-blue);
-}
-
-.bio-modal {
-  border: none;
-  padding: 0;
-  width: min(680px, calc(100% - 2rem));
-  background: transparent;
-}
-
-.bio-modal::backdrop {
-  background: rgba(1, 2, 3, 0.68);
-  backdrop-filter: blur(10px);
-}
-
-.bio-modal-content {
-  padding: 1.35rem;
-  display: grid;
-  gap: 0.9rem;
 }
 
 .bio-modal-close {
@@ -1030,12 +946,6 @@ textarea:focus {
   width: min(640px, 100%);
   margin-bottom: 1.2rem;
   border: 0.5px solid var(--border-muted);
-}
-
-.case-modal-summary {
-  margin-bottom: 1rem;
-  color: var(--text-heading);
-  font-size: 1.05rem;
 }
 
 .case-detail-grid {
@@ -1140,9 +1050,7 @@ textarea:focus {
   }
 
   .philosophy-grid,
-  .portfolio-grid,
   .portfolio-company-grid,
-  .team-grid,
   .risk-management-grid {
     grid-template-columns: 1fr;
   }
@@ -1242,9 +1150,13 @@ textarea:focus {
     padding: 0.85rem;
   }
 
-  .company-card img {
+  .case-open > picture {
     grid-row: 1 / 5;
     grid-column: 1;
+    align-self: start;
+  }
+
+  .case-open > picture img {
     width: 116px;
     height: 116px;
     border-radius: 8px;
